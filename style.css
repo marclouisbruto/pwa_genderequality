@@ -1,0 +1,103 @@
+/* nav-bar */
+#nav {
+    position: fixed;
+    top: -100px; 
+    left: 0;
+    transition: top 0.3s, transform 0.3s;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+#nav.visible {
+    top: 0; /* show the navbar at the top of the viewport */
+    transform: translateY(0);
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+#nav {
+    animation: slideOut 0.3s forwards;
+}
+
+#nav.visible {
+    animation: slideIn 0.9s forwards;
+}
+
+.img-home{
+    opacity: 0.9;
+}
+
+body{
+    background-color: #dec8e2;
+    padding: 0;
+}
+.marg{
+    margin: 50px auto;
+}
+.qoute{
+    margin-top: 48px;
+}
+.sdg-marg{
+    margin: 48px auto;
+}
+@media only screen and (max-width: 845px) {
+    .marg{
+        margin: 25px auto;
+    }
+    .qoute{
+        margin-top: 24px;
+    }
+.sdg-marg{
+    margin: 24px auto;
+}
+  }
+  @media only screen and (max-width: 648px) {
+    .marg{
+        margin: auto;
+    }
+  }
+
+@media only screen and (max-width: 650px) {
+  
+    .qoute{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .qoute{
+        margin-top: 16px;
+    }
+.sdg-marg{
+    font-size: 20px;
+}
+p.h5, p.h3{
+    font-size: 16px;
+}
+.footer{
+    font-size: 12px;
+}
+  }
+@media only screen and (max-width: 493px) {
+    .qoute{
+        font-size: 16px;
+    }
+}
